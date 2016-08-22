@@ -1,0 +1,113 @@
+
+/* .qtoggler {
+	display:inline;
+	height: 10px;
+	background-color: red;
+	float: right;
+	width: 50%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(45deg, translucent 0%, translucent 25%, black 50%, black 100%);
+	background-size: 8px 8px;
+} */
+
+.information>.qlink {
+	float: left;
+	margin-right: 5px;
+	height: 16px !important;
+/*   width: 10%; */
+}
+
+.message.collapsed {
+	height: 18em;
+	overflow: hidden;
+}
+
+.qtoggler {
+	overflow: hidden;
+	height: 1.5em;
+/*   background-image: linear-gradient(45deg, transparent 25%, red 25%, red 75%, transparent 75%, transparent 100%),
+		linear-gradient(45deg, transparent 25%, red 25%, red 75%, transparent 75%, transparent 100%);
+	background-size: 8px 8px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; */
+	/* DEBUG */
+/*   border: 1px solid white; */
+}
+
+.qtoggler::before {
+	content: "";
+	display: block;
+	position: relative;
+/*   position: absolute; */
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-image: linear-gradient(45deg, #91AECC 25%, transparent 25%, transparent 100%);
+	/*   background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 100%),
+	linear-gradient(-45deg, black 25%, black 25%, transparent 25%, transparent 100%); */
+/*   background-size: 64px 64px; */
+	/*   background-position: 50% 50%, calc(50% - 64px) 50%; */
+/*   background-position: 50% 50%; */
+	transform-origin: 4px 12px;
+/*   transform: translate(-4px, -10px) rotate(135deg); */
+/*   DEBUG */
+/*   border: 1px dashed red; */
+/*   animation: rotate 2s infinite step-end; */
+}
+
+.qtoggler.up::before {
+	transition: transform 500ms;
+	transform: translate(-4px, -10px) rotateX(0deg) rotate(135deg);
+}
+
+.qtoggler.down::before {
+	transition: transform 500ms;
+	transform: translate(-4px, -14px) rotateX(180deg) rotate(135deg);
+}
+
+/*
+@keyframes rotate {
+	0% { transform: translate(-4px, -12px) rotate(315deg); }
+	25% { transform: translate(-4px, -12px) rotate(45deg); }
+	50% { transform: translate(-4px, -12px) rotate(135deg); }
+	75% { transform: translate(-4px, -12px) rotate(225deg); }
+}
+*/
+
+.quote.qof {
+	overflow: hidden;
+}
+
+.quote .qfooter {
+	margin-top: -4em;
+	z-index: 99;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+	height: 4em;
+/*   background-color: #ace; */
+	background-image: linear-gradient(to top, #ace, #ace 25%, #bdf 25%, transparent 100%);
+/*   DEBUG */
+/*   border: 1px dashed white; */
+}
+
+.quote .qfooter::after {
+	content: "...";
+	display: inline-block;
+	height: 1em;
+	margin-top: 3em;
+/*   top: 3em; */
+	text-align: center;
+	line-height: 0.6em;
+/*   DEBUG */
+/*   border: 1px dashed pink; */
+}
+
+.qfooter.qhidden {
+	display: none;
+}
