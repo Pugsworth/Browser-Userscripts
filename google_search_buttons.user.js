@@ -4,7 +4,7 @@
 // @include     https://www.google.com/search*
 // @version     0.25
 // @run-at      document-end
-// @grant		GM_addStyle
+// @grant       GM_addStyle
 // @noframes
 // ==/UserScript==
 
