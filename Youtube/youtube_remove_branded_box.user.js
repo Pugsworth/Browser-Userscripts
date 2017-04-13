@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Remove Youtube's Shitty Autoplaying User Video
+// @name        youtube remove branded box
 // @namespace   pugsworth.wellington
 // @include     https://www.youtube.com/user/*
 // @include     https://youtube.com/user/*
